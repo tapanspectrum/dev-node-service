@@ -5,6 +5,7 @@ const helmet = require("helmet");
 const morgan = require("morgan");
 const userRoute = require("./routes/users");
 const authRoute = require("./routes/auth");
+const postRoute = require("./routes/posts");
 
 //initalize dotenv
 const dotenv = require("dotenv").config();
@@ -22,6 +23,7 @@ app.use(morgan("common"));
 //Define routes
 app.use("/api/users", userRoute);
 app.use("/api/auth", authRoute);
+app.use("/api/post", postRoute);
 
 
 // Server initalize here
